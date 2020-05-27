@@ -11,16 +11,16 @@ i = 0
 print("求平均数\n帮助：逐个输入数字，输入完成请输入q")
 while True:
     i = i + 1
-    userin = input("输入第"
+    user_input = input("输入第"
                    + str(i)
                    + "个数字>>")
-    if userin == "q":
+    if user_input == "q":
         break
-    elif userin == False:
+    elif user_input == False:
         break
     else:
-        userin = int(userin)
-        digits.append(userin)
+        user_input = int(user_input)
+        digits.append(user_input)
 num = len(digits)
 all = sum(digits)
 print("数字数量=" + str(num) + "\n总和=" + str(all))
