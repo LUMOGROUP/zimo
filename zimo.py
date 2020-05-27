@@ -1,10 +1,9 @@
-# coding: ascii
+# coding: utf8
 #Copyright (c) 2020. LSHT LLC.
 """
 zimo.py public function. All-in-one functioon lib.
-""""""
-imported list
-os time
+__________________________________________________
+DOCUMENT of zimo
 """
 
 def help(function_name="help"):
@@ -43,3 +42,6 @@ def check_os(os_type):
             return True
         elif os_type == "nt":
             return False
+
+#def zimo_copyright():
+#    print()
