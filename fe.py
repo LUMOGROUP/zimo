@@ -13,6 +13,12 @@ import os, json, time
 def fic():
     files = ["zimo.py", "README.md", "LICENSE", "testing.py"]
     missing_files = []
+    if os.path.isfile("fic.log") == True:
+        with open("fic.log", 'a') as fic_log:
+            fic_log.write(str(time.time()) + "-scan-missingfile-")
+    elif os.path.isfile("fic.log") == False:
+        with open("fic.log", 'a+') as fic_log:
+            fic_log.write(str(time.time()) + "-scan-missingfile-")
     for file in files:
         file_exists = os.path.isfile(file)
         if file_exists == True:
@@ -22,14 +28,11 @@ def fic():
             file +
             ". Please reinstall zimo.")
             missing_files.append(file)
+            with open("fic.log", 'a') as fic_log:
+                fic_log.write(file)
 
 
-    if os.path.isfile("fic.log") == True:
-        with open("fic.log", 'a+') as fic_log:
-            fic_log.write(str(time.time()) + "-scan-missingfile-" + str(len(missing_files)) + "")
-    elif os.path.isfile("fic.log") == False:
-        with open("fic.log", 'a+') as fic_log:
-            fic_log.write(str(time.time()) + "-scan-missingfile-" + str(len(missing_files)) + "")
+    
 #os.path.isfile("test-data")
 
 fic()
