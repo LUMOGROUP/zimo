@@ -26,10 +26,10 @@ def fic():
 
     if os.path.isfile("fic.log") == True:
         with open("fic.log", 'a+') as fic_log:
-            fic_log.write(str(time.time()) + "-scan-missingfile-" + file + str(len(missing_files)))
+            fic_log.write(str(time.time()) + "-scan-missingfile-" + str(len(missing_files)) + "")
     elif os.path.isfile("fic.log") == False:
         with open("fic.log", 'a+') as fic_log:
-            fic_log.write(str(time.time()) + "-scan-missingfile-" + file + str(len(missing_files)))
+            fic_log.write(str(time.time()) + "-scan-missingfile-" + str(len(missing_files)) + "")
 #os.path.isfile("test-data")
 
 fic()
