@@ -17,8 +17,8 @@ def help(function_name="help"):
 
 def pause(message="Press any key to continue..."):
     """It's just like batch language. pause [massage]"""
-    pause_pause = input(message)
-    print(pause_pause)
+    input(message)
+    
 
 def timestamp():
     """Get the unix timestamp now and retuen it. 
